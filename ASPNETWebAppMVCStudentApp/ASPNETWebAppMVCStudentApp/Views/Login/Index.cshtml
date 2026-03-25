@@ -1,0 +1,29 @@
+﻿@model ASPNETWebAppMVCStudentApp.tblUser
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School App - Login</title>
+</head>
+<body style="padding: 50px; font-family: Arial;">
+    <h2>Login</h2>
+    <div style="color:red;">@ViewBag.ErrorMessage</div>
+    @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <p>
+            <label>Username:</label><br />
+            @Html.TextBoxFor(m => m.Username, new { required = "required" })
+        </p>
+        <p>
+            <label>Password:</label><br />
+            @Html.PasswordFor(m => m.Password, new { required = "required" })
+        </p>
+        <button type="submit">Login</button>
+    }
+</body>
+</html>
