@@ -1,0 +1,15 @@
+﻿@model ASPNETWebAppMVCStudentApp.Models.CourseViewModel
+@{
+    ViewBag.Title = "Student Report";
+}
+
+<h2>Student Report by Subject</h2>
+
+<form method="post" action="/Report/Generate">
+    <div class="form-group" style="margin-bottom: 20px;">
+        <label style="font-weight: bold;">Choose a subject:</label>
+        @Html.DropDownListFor(m => m.SelectedCourseID, Model.Courses, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" name="action" value="export" class="btn btn-success">Export to PDF file</button>
+</form>
