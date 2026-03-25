@@ -1,5 +1,5 @@
 /ASPNETWebAppMVCStudentApp/.vs
 /ASPNETWebAppMVCStudentApp/obj
 /ASPNETWebAppMVCStudentApp/bin
-/Database
+/Database/*
 !/Database/script.sql
